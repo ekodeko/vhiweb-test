@@ -1,0 +1,99 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.login-bg {
+	width: 100vw !important;
+	height: 100vh !important;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: top;
+	background-image: url(https://images.unsplash.com/photo-1492252719637-c7b68468489b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);
+	width: 100%;
+	height: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: 0.02em;
+	font-weight: 400;
+}
+.blurred-box {
+	position: relative;
+	width: 250px;
+	height: 350px;
+	top: calc(50% - 175px);
+	left: calc(50% - 125px);
+	background: inherit;
+	border-radius: 2px;
+	overflow: hidden;
+	&:after {
+		content: '';
+		width: 300px;
+		height: 300px;
+		background: inherit;
+		position: absolute;
+		left: -20px;
+		right: 0;
+		top: -25px;
+		bottom: 0;
+		box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.05);
+		filter: blur(10px);
+	}
+}
+.user-login-box {
+	position: relative;
+	margin-top: 30px;
+	text-align: center;
+	z-index: 1;
+	>* {
+		display: inline-block;
+		width: 200px;
+	}
+}
+.user-icon {
+	width: 100px;
+	height: 100px;
+	position: relative;
+	border-radius: 50%;
+	background-size: contain;
+	background-image: url(https://scontent.fbkk5-4.fna.fbcdn.net/v/t1.0-9/58570687_2680129875392028_5011432828122955776_n.jpg?_nc_cat=110&_nc_eui2=AeHwg0rU9FWO0yO2VOlHLaiCpe-U71lSklS8IV_Q4WyktDbQSmRx61tHcLEi2Z7rzuFMd8pkXi6JSro2PPxj6W7wMUe7zLE_e_CpixpdjfGquQ&_nc_oc=AQmlDOVZ8xzlsI7L-dGpdcIYJreRp00N5PCFAe6P6vVI11JSbqbRMgn7oBzCeOGLgiB6n2wD2e8D_Nrv_5P6NmBE&_nc_ht=scontent.fbkk5-4.fna&oh=e62846684b09b011d1c1ea35f3c12089&oe=5DDAF870);
+}
+.user-name {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	color: #fff;
+}
+input.user-username {
+	margin-bottom: 4px !important;
+	display: block;
+	width: 200px;
+	height: 18px;
+	opacity: 0.4;
+	border-radius: 2px;
+	padding: 15px 15px;
+	border: none;
+	margin: 0 auto;
+	outline: none;
+}
+input.user-password {
+	display: block;
+	width: 200px;
+	height: 18px;
+	opacity: 0.4;
+	border-radius: 2px;
+	padding: 15px 15px;
+	border: none;
+	margin: 0 auto;
+	outline: none;
+}
+.my-btn{
+    margin-top: .5rem;
+    border: none;
+    padding: .4rem 0;
+    border-radius: .2rem;
+    opacity: .8;
+    transition: .3s all;
+    &:hover{
+        opacity: 1;
+    }
+}
