@@ -26,7 +26,7 @@ function Navigation() {
                 <NavLink to={'/user'} className={'nav-link'}>User</NavLink>
                 {
                   isLogin ==='true' ?
-                  <a href='#' className={'nav-link'} onClick={doLogout}>Logout</a>
+                  <a href='/' className={'nav-link'} onClick={doLogout}>Logout</a>
                   :
                   <NavLink to={'/login'} className={'nav-link'}>Login</NavLink>
                 }
