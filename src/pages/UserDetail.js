@@ -11,19 +11,19 @@ function Home() {
     const [loading, setLoading] = useState(true);
 
 
-    function getUser() {
-        axios.get('https://reqres.in/api/users/'+id)
-            .then((res)=>{
-                setUser(res.data.data)
-                setLoading(false)
-            })
-            .catch((err)=>{
-                console.log(err);
-            })
-    }
     useEffect(() => {
-        getUser()
-    }, [])
+      const getUser = ()=>{
+          axios.get('https://reqres.in/api/users/'+id)
+              .then((res)=>{
+                  setUser(res.data.data)
+                  setLoading(false)
+              })
+              .catch((err)=>{
+                  console.log(err);
+              })
+      }
+      getUser();
+    }, [id])
     
   return (
     loading ? 
